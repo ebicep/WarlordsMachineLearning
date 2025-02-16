@@ -42,4 +42,4 @@
 
 # Results
 
-- [Results](Results.md)
+- [No Mercy](results/players-no_mercy.md)

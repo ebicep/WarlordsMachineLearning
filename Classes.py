@@ -154,9 +154,9 @@ class Player:
             else:
                 raise TypeError(f"{attr_name} has an unsupported type: {type(value)}")
 
-    def get_player_stats(self):
+    def get_player_stats(self) -> object:
         """Returns a dictionary of statistics for the player."""
-        stats = {}
+        stats = {"name": self.name}
         for attr_name, attr_value in self.__dict__.items():
             if attr_name in ["uuid", "name", "spec", "skill_boost"]:
                 continue

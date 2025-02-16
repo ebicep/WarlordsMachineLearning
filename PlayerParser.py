@@ -1,10 +1,23 @@
 import json
+import os
 from typing import Dict, List
 
 from Classes import Player, UUID, PlayerStats
+from GameOperations import GameOperation, PostOperation
 
 
-def parse_players(json_file_paths: List[str]) -> Dict[str, Player]:
+def parse_players(json_file_paths: List[str], game_operations: List[GameOperation], serialize: bool, deserialize: bool) -> list[object]:
+    name = "-".join([op.__name__ for op in game_operations])
+    print("# ", name)
+
+    file_path = os.path.join("data", f"players-{name}.json")
+    if deserialize:
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as file:
+                return json.load(file)
+        else:
+            print(f"The file {file_path} does not exist. Parsing players")
+
     unique_games: Dict[str, Dict] = {}
 
     for json_file_path in json_file_paths:
@@ -30,7 +43,15 @@ def parse_players(json_file_paths: List[str]) -> Dict[str, Player]:
             continue
         if not game["counted"] or game["game_mode"] != "CAPTURE_THE_FLAG":
             continue
-        if abs(game["blue_points"] - game["red_points"]) > 550:  # TODO feature flags
+
+        # Apply game operations
+        operation_continue = False
+        for operation in game_operations:
+            if operation(game) == PostOperation.CONTINUE:
+                operation_continue = True
+                break
+
+        if operation_continue:
             continue
 
         valid_game = True
@@ -77,7 +98,16 @@ def parse_players(json_file_paths: List[str]) -> Dict[str, Player]:
 
     print("Valid games: ", valid_games)
 
-    return players
+    data = []
+    for player in players.values():
+        data.append(player.get_player_stats())
+
+    if serialize:
+        with open(file_path, 'w') as file:
+            json.dump(data, file, indent=4)
+            print(f"Serialized players to {file_path}")
+
+    return data
 
 
 def parse_game_players(json_file_paths: List[str]) -> Dict[int, List[PlayerStats]]:

@@ -1,3 +1,5 @@
+from typing import List
+
 import pandas as pd
 from pandas import DataFrame
 from sklearn.linear_model import LinearRegression
@@ -7,18 +9,20 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 from tabulate import tabulate
 
+from DataframeOperations import DataFrameOperation
+
 
 class WeightCalculator:
-    def __init__(self, df_functions, min_plays=10, polynomial_degree=1):
-        self.df_functions = df_functions
+    def __init__(self, dataframe_operations: List[DataFrameOperation], min_plays=10, polynomial_degree=1):
+        self.dataframe_operations = dataframe_operations
         self.min_plays = min_plays
         self.polynomial_degree = polynomial_degree
 
     def train(self, df: DataFrame, print_table: bool = False):
         name = ""
-        for consumer in self.df_functions:
-            df = consumer(df)
-            name += consumer.__name__ + " + "
+        for operation in self.dataframe_operations:
+            df = operation(df)
+            name += operation.__name__ + " + "
 
         df = df[df["plays"] >= self.min_plays].copy()
         df.loc[:, "winrate"] = df["wins"] / df["plays"]

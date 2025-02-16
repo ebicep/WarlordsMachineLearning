@@ -6,7 +6,6 @@
         <entry key="$PROJECT_DIR$/.idea/WarlordsMachineLearning.iml">
           <value>
             <JupyterConnectionParameters>
-              <option name="argv" value="notebook --no-browser --ServerApp.iopub_data_rate_limit" />
               <option name="managed" value="true" />
               <option name="sdkName" value="" />
             </JupyterConnectionParameters>
