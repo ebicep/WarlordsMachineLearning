@@ -38,7 +38,7 @@
 
 # Target
 
-- Win Rate
+- winrate calculated from wins / plays
 
 # Results
 
