@@ -1,0 +1,208 @@
+{
+  "_id": {
+    "$oid": "64d14efb46b5e47d00c03ecd"
+  },
+  "time_left": 599,
+  "winner": "RED",
+  "blue_points": 15,
+  "red_points": 595,
+  "players": {
+    "RED": [
+      {
+        "seconds_in_combat": 113,
+        "seconds_in_respawn": 13,
+        "flag_captures": 0,
+        "flag_returns": 2,
+        "total_damage_on_carrier": 11425,
+        "total_healing_on_carrier": 0,
+        "damage_on_carrier": [
+          5093,
+          414,
+          3717,
+          0,
+          2201,
+          0
+        ],
+        "healing_on_carrier": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "uuid": {
+          "$binary": {
+            "base64": "vS9kM3KTQIaEIJR/Kq76uA==",
+            "subType": "04"
+          }
+        },
+        "name": "ATigerLostInTime",
+        "spec": "ASSASSIN",
+        "skill_boost": "INCENDIARY_CURSE",
+        "blocks_travelled": 0,
+        "x_locations": "687.5,673.4,",
+        "z_locations": "231.5,230.0,",
+        "total_kills": 3,
+        "total_assists": 7,
+        "total_deaths": 1,
+        "total_damage": 39642,
+        "total_healing": 0,
+        "total_absorbed": 0,
+        "kills": [
+          0,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "assists": [
+          1,
+          2,
+          4,
+          0,
+          0,
+          0
+        ],
+        "deaths": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "damage": [
+          5819,
+          3470,
+          9658,
+          9875,
+          10696,
+          124
+        ],
+        "healing": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "absorbed": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "experience_earned_spec": 1069,
+        "experience_earned_universal": 1119
+      }
+    ],
+    "BLUE": [
+      {
+        "seconds_in_combat": 180,
+        "seconds_in_respawn": 25,
+        "flag_captures": 0,
+        "flag_returns": 0,
+        "total_damage_on_carrier": 653,
+        "total_healing_on_carrier": 0,
+        "damage_on_carrier": [
+          653,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "healing_on_carrier": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "uuid": {
+          "$binary": {
+            "base64": "4LG89Z2jTHqprItyaIY1Ag==",
+            "subType": "04"
+          }
+        },
+        "name": "rapataco",
+        "spec": "REVENANT",
+        "skill_boost": "ORBS_OF_LIFE",
+        "blocks_travelled": 0,
+        "x_locations": "515.4,524.8,",
+        "z_locations": "242.4,253.5,",
+        "total_kills": 1,
+        "total_assists": 1,
+        "total_deaths": 3,
+        "total_damage": 41314,
+        "total_healing": 49394,
+        "total_absorbed": 0,
+        "kills": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "assists": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "deaths": [
+          0,
+          1,
+          2,
+          0,
+          0,
+          0
+        ],
+        "damage": [
+          7533,
+          5189,
+          9439,
+          9545,
+          9105,
+          503
+        ],
+        "healing": [
+          17042,
+          8089,
+          7695,
+          8144,
+          8424,
+          0
+        ],
+        "absorbed": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "experience_earned_spec": 519,
+        "experience_earned_universal": 569
+      }
+    ]
+  },
+  "exact_date": {
+    "$date": "2023-08-07T20:07:19.397Z"
+  },
+  "date": "08/07/2023 16:07:19",
+  "map": "APERTURE",
+  "game_mode": "CAPTURE_THE_FLAG",
+  "game_addons": [],
+  "counted": true,
+  "_class": "com.ebicep.warlords.database.repositories.games.pojos.ctf.DatabaseGameCTF"
+}
