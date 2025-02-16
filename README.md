@@ -40,19 +40,4 @@
 
 # Results
 
-- Mean Squared Error (MSE): 0.0184
-- R-squared (R2): -0.1013
-
-
-- total_assists_average: 0.0474
-- total_healing_on_carrier_average: -0.0355
-- total_deaths_average: -0.0328
-- total_kills_average: 0.0295
-- total_damage_on_carrier_average: 0.0290
-- total_damage_average: -0.0286
-- total_absorbed_average: -0.0238
-- seconds_in_combat_average: 0.0181
-- flag_captures_average: 0.0138
-- total_healing_average: -0.0006
-- average_respawn_time: 0.0004
-
+- [Results](Results.md)
