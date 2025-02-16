@@ -33,6 +33,8 @@
 
 - average_respawn_time
 - average_dhp
+- kda
+- ka
 
 # Target
 
