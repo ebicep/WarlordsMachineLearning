@@ -9,7 +9,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
 from tabulate import tabulate
 
-from DataframeOperations import DataFrameOperation
+from data_frame_operations import DataFrameOperation
 
 
 class WeightCalculator:

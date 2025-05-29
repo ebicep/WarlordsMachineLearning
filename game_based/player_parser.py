@@ -2,15 +2,15 @@ import json
 import os
 from typing import Dict, List
 
-from Classes import Player, UUID, PlayerStats
-from GameOperations import GameOperation, PostOperation
+from classes import Player, UUID, PlayerStats
+from game_operations import GameOperation, PostOperation
 
 
 def parse_players(json_file_paths: List[str], game_operations: List[GameOperation], serialize: bool, deserialize: bool) -> list[object]:
     name = "-".join([op.__name__ for op in game_operations])
     print("# ", name)
 
-    file_path = os.path.join("data", f"players-{name}.json")
+    file_path = os.path.join("../data", f"players-{name}.json")
     if deserialize:
         if os.path.exists(file_path):
             with open(file_path, 'r') as file:
